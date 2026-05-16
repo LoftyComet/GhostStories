@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 720" role="img" aria-labelledby="title desc">
+  <title id="title">鬼宅平面草图</title>
+  <desc id="desc">十二乘十二网格的鬼宅结构草图，标注门厅、厨房、书房、主卧和地下入口。</desc>
+  <rect width="720" height="720" fill="#07100b"/>
+  <g stroke="#1f7f36" stroke-width="1" opacity="0.45">
+    <path d="M60 0v720M120 0v720M180 0v720M240 0v720M300 0v720M360 0v720M420 0v720M480 0v720M540 0v720M600 0v720M660 0v720"/>
+    <path d="M0 60h720M0 120h720M0 180h720M0 240h720M0 300h720M0 360h720M0 420h720M0 480h720M0 540h720M0 600h720M0 660h720"/>
+  </g>
+  <g fill="none" stroke="#33ff66" stroke-width="6" stroke-linejoin="round">
+    <path d="M60 600h180v-180h120v-240h240v420h-120v60H60z"/>
+    <path d="M240 420h240M360 180v240M480 420v180M240 600v60"/>
+    <path d="M420 180v-60h180"/>
+  </g>
+  <g fill="#d2b56b" font-family="monospace" font-size="24" opacity="0.9">
+    <text x="86" y="644">门厅</text>
+    <text x="284" y="548">厨房</text>
+    <text x="392" y="292">书房</text>
+    <text x="488" y="230">主卧</text>
+    <text x="500" y="548">地下入口</text>
+  </g>
+  <g fill="#ff4f4f" font-family="monospace" font-size="22">
+    <text x="140" y="506">X</text>
+    <text x="500" y="326">?</text>
+    <text x="560" y="626">B1</text>
+  </g>
+</svg>

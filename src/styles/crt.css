@@ -1,0 +1,74 @@
+.crt-shell {
+  position: relative;
+  min-height: 100vh;
+  padding: 18px;
+  isolation: isolate;
+}
+
+.crt-shell::before,
+.crt-shell::after {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  content: "";
+  z-index: 20;
+}
+
+.crt-shell::before {
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.035) 0,
+    rgba(255, 255, 255, 0.035) 1px,
+    transparent 1px,
+    transparent 4px
+  );
+  mix-blend-mode: screen;
+  opacity: 0.25;
+}
+
+.crt-shell::after {
+  border: 1px solid rgba(51, 255, 102, 0.28);
+  box-shadow:
+    inset 0 0 60px rgba(51, 255, 102, 0.08),
+    inset 0 0 140px rgba(0, 0, 0, 0.85);
+  border-radius: 2vw;
+}
+
+.terminal-panel,
+.ops-panel,
+.archive-modal,
+.qte-panel {
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-green), inset 0 0 26px rgba(51, 255, 102, 0.05);
+}
+
+.terminal-log,
+.scene-frame,
+.mini-map {
+  text-shadow: 0 0 8px rgba(51, 255, 102, 0.55);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .crt-shell::before {
+    animation: scanlineDrift 7s linear infinite;
+  }
+
+  .terminal-message.investigator p::after {
+    animation: cursorBlink 1s steps(1) infinite;
+  }
+}
+
+@keyframes scanlineDrift {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(12px);
+  }
+}
+
+@keyframes cursorBlink {
+  50% {
+    opacity: 0;
+  }
+}

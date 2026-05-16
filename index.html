@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>鬼宅事务所 | Ghost House Agency</title>
+    <link rel="stylesheet" href="./src/styles/base.css" />
+    <link rel="stylesheet" href="./src/styles/crt.css" />
+    <link rel="stylesheet" href="./src/styles/layout.css" />
+  </head>
+  <body>
+    <div class="crt-shell">
+      <header class="top-bar">
+        <div>
+          <span class="kicker">GHOST HOUSE AGENCY</span>
+          <h1>鬼宅事务所</h1>
+        </div>
+        <div class="system-clock" id="systemClock">--:--:--</div>
+      </header>
+
+      <main class="game-layout">
+        <section class="terminal-panel" aria-label="对讲终端">
+          <div class="panel-title">
+            <span>对讲终端 / 调查员 林雾</span>
+            <span id="linkStatus">LINK STABLE</span>
+          </div>
+          <div class="terminal-log" id="terminalLog" aria-live="polite"></div>
+          <form class="command-bar" id="commandForm">
+            <button class="icon-button mic-button" id="voiceButton" type="button" aria-label="按住录音">
+              M
+            </button>
+            <input
+              id="commandInput"
+              autocomplete="off"
+              placeholder="输入指令，例如：去检查古董梳妆台"
+            />
+            <button class="send-button" type="submit">发送</button>
+          </form>
+        </section>
+
+        <aside class="ops-column" aria-label="行动控制台">
+          <section class="ops-panel" id="statusPanel"></section>
+          <section class="ops-panel" id="powerPanel"></section>
+          <section class="ops-panel" id="monitorPanel"></section>
+          <section class="ops-panel" id="mapPanel"></section>
+        </aside>
+      </main>
+
+      <button class="archive-trigger" id="archiveButton" type="button" aria-label="打开纸质资料库">
+        ⌕
+      </button>
+      <div id="archiveModal"></div>
+      <div id="qteOverlay"></div>
+    </div>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+:root {
+  color-scheme: dark;
+  --bg: #030604;
+  --panel: #07100b;
+  --panel-strong: #0b1710;
+  --green: #33ff66;
+  --green-soft: #9affad;
+  --green-dim: #1f7f36;
+  --amber: #d2b56b;
+  --red: #ff4f4f;
+  --blue: #7cb7ff;
+  --paper: #d5caa3;
+  --ink: #16130c;
+  --line: rgba(51, 255, 102, 0.34);
+  --shadow-green: 0 0 14px rgba(51, 255, 102, 0.22);
+  --font-terminal: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-family: var(--font-terminal);
+  background: var(--bg);
+  color: var(--green-soft);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+  background: var(--bg);
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+::selection {
+  background: var(--green);
+  color: #001806;
+}
