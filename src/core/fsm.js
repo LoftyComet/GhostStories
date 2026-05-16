@@ -48,7 +48,9 @@ export function advanceInvestigator(state) {
     nextCoordinates[1] === investigator.targetCoordinates[1];
   const nextSteps = investigator.steps + 1;
   const pulse = nextSteps % 5 === 0;
-  const qte = shouldTriggerQte(targetObject, nextSteps) ? createBreakerQte() : state.ui.qte;
+  const qte = shouldTriggerQte(targetObject, state.ui.completedQtes)
+    ? createBreakerQte()
+    : state.ui.qte;
   const sanityDelta = investigator.state === 'Flee_from_Ghosts' ? -3 : targetObject?.effect?.sanity ?? 0;
 
   return {
@@ -130,6 +132,9 @@ export function resolveQte(state, success) {
     ui: {
       ...state.ui,
       qte: null,
+      completedQtes: success
+        ? [...new Set([...state.ui.completedQtes, qte.id])]
+        : state.ui.completedQtes,
     },
   };
 }
@@ -186,8 +191,8 @@ function normalizeActionState(actionState) {
   return 'Random_Exploration';
 }
 
-function shouldTriggerQte(targetObject, steps) {
-  return targetObject?.id === 'breaker-box' && steps > 0;
+function shouldTriggerQte(targetObject, completedQtes) {
+  return targetObject?.id === 'breaker-box' && !completedQtes.includes('breaker-grid');
 }
 
 function createBreakerQte() {

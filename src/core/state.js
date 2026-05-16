@@ -42,6 +42,7 @@ export function createInitialState() {
       archivesOpen: false,
       activeArchiveId: 'client-letter',
       qte: null,
+      completedQtes: [],
       voiceStatus: 'idle',
       monitorFrame: {
         title: '门厅',
