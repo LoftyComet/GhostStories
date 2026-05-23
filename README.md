@@ -46,3 +46,8 @@ src/services/           AI/STT/AIGC 等外部服务适配
 src/ui/                 DOM 视图层
 src/styles/             页面和 CRT 视觉
 ```
+
+这里是新修改的Read Me
+需要测试一下这个新修改的和之前的合并会怎么样？
+你好认得
+你好
