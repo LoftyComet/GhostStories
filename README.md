@@ -46,3 +46,5 @@ src/services/           AI/STT/AIGC 等外部服务适配
 src/ui/                 DOM 视图层
 src/styles/             页面和 CRT 视觉
 ```
+
+这是一段测试文本
